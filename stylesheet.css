@@ -12,6 +12,7 @@ body {
     border: 0;
 }
 .nhsLogoContainer {
+    position: absolute;
     height: 60px;
     width: 148px;
     top: 50%;
