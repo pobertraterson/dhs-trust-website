@@ -14,4 +14,7 @@ body {
 .nhsLogoContainer {
     height: 60px;
     width: 148px;
+    top: 50%;
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
 }
