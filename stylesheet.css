@@ -1,10 +1,17 @@
+@font-face{
+    font-family: Frutiger;
+    src: url(/resources/Frutiger.ttf)
+}
+
 .banner {
+    position: fixed;
     background-color: #005EB8;
     padding: 0;
     margin: 0;
     width: 100%;
     height: 90px;
     border: 0;
+    font-family: Frutiger;
 }
 body {
     margin: 0;
@@ -12,10 +19,23 @@ body {
     border: 0;
 }
 .nhsLogoContainer {
+    margin-left: 10%;
     position: absolute;
     height: 60px;
     width: 148px;
     top: 50%;
     -ms-transform: translateY(-50%);
     transform: translateY(-50%);
+    transition: 0.3s;
+}
+.nhsLogoContainer img:hover{
+    border: 3px solid #555;
+    margin: -3px;
+}
+.nhsLogoContainer h1{
+    top: 25%;
+    -ms-transform: translateY(-25%);
+    transform: translateY(-25%);
+    color: white;
+    margin-left: 160px;
 }
