@@ -5,7 +5,7 @@
 
 .banner {
     position: fixed;
-    background-color: #005EB8;
+    background-color: #045cb4;
     padding: 0;
     margin: 0;
     width: 100%;
@@ -31,7 +31,7 @@ body {
     transition: 0.3s;
 }
 .nhsLogoContainer img:hover{
-    border: 3px solid #555;
+    border: 3px solid #1a2e55;
     margin: -3px;
 }
 .nhsLogoContainer h1{
@@ -46,6 +46,22 @@ body {
     height: 776px;
     overflow: hidden;
 }
+.hospitalImageBanner img{
+    pointer-events: none;
+}
+.healthWarning {
+    border-radius: 25px;
+    border: 5px solid #c01010;
+    padding: 20px;
+    width: auto;
+    min-height: 150px;
+    max-height: fit-content;
+    color: white;
+    background-color: #cc7a7a;
+}
+.healthWarning a{
+    color: white;
+}
 .hospitalImageBannerContainer {
     width: 100%;
     height: 500px;
@@ -55,28 +71,36 @@ body {
 }
 .textUnderImage {
     margin-left: 10%; 
-    margin-top: -265px;
     transition: 0.3s;
     width: 37.5%;
     float: left;
+    margin-top: auto;
 }
 .textUnderImage p {
     font-size: 22.5px;
+}
+.fitWithPage {
+    margin-top: -265px;
+}
+.googleMapsiframe {
+    width: 37.5%; 
+    float: right;
+    margin-right: 10%;
 }
 
 @media only screen and (max-width: 1450px) {
     .hospitalImageBannerContainer {
         height: 450px;
     }
-    .textUnderImage {
-        margin-top: -315px
+    .fitWithPage {
+        margin-top: -315px;
     }   
 }
 @media only screen and (max-width: 1243px) {
     .hospitalImageBannerContainer {
         height: 400px;
     }
-    .textUnderImage {
+    .fitWithPage {
         margin-top: -365px
     }   
 }
@@ -85,6 +109,20 @@ body {
         height: 350px;
     }
     .textUnderImage {
-        margin-top: -415px
-    }   
+        float: none;
+        width: 90%;
+        margin-left: 5%;
+    }
+    .googleMapsiframe {
+        float: none;
+        width: 95%;
+        margin-left: 2.5%;
+        margin-top: 10px
+    }
+    .nhsLogoContainer {
+        margin-left: 2.5%;
+    }
+    .nhsLogoContainer h1{
+        margin-left: 155px;
+    }
 }
