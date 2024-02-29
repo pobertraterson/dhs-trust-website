@@ -34,12 +34,14 @@ body {
     border: 3px solid #1a2e55;
     margin: -3px;
 }
-.nhsLogoContainer h1{
+.nhsLogoContainer p{
     top: 25%;
-    -ms-transform: translateY(-25%);
-    transform: translateY(-25%);
+    font-size: 32px;
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
     color: white;
     margin-left: 160px;
+    pointer-events: none;
 }
 .hospitalImageBanner {
     width: 100%;
