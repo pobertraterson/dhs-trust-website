@@ -64,6 +64,31 @@ body {
 .healthWarning a{
     color: white;
 }
+.submitButton {
+    font-family: Frutiger;
+    color: white;
+    font-size: 30px;
+    background-color: #018711;
+    border-width: 3px;
+    border-style: solid;
+    height: 50px;
+    width: 120px;
+}
+.inputTextBox {
+    height: 40px;
+    width: 400px;
+    font-size: 25px;
+    font-family: Frutiger;
+    border-width: 3px;
+    border-style: solid;
+}
+.submitButton:hover {
+    background-color: #007e0f;
+}
+.submitButton:active {
+    background-color:#d4d100;
+    color: black;
+}
 .hospitalImageBannerContainer {
     width: 100%;
     height: 500px;
@@ -89,6 +114,12 @@ body {
     float: right;
     margin-right: 10%;
 }
+.videoContainer {
+    width: 560px;
+    height: 315px;
+    position:relative;
+    transition: 0.2s;
+}
 
 @media only screen and (max-width: 1450px) {
     .hospitalImageBannerContainer {
@@ -105,6 +136,24 @@ body {
     .fitWithPage {
         margin-top: -365px
     }   
+}
+@media only screen and (max-width: 982px) {
+    .videoContainer {
+        width: 384px;
+        height: 216px;
+    }
+}
+@media only screen and (max-width: 818px) {
+    .videoContainer {
+        width: 336px;
+        height: 189px;
+    }
+}
+@media only screen and (max-width: 715px) {
+    .videoContainer {
+        width: 256px;
+        height: 144px;
+    }
 }
 @media only screen and (max-width: 635px) {
     .hospitalImageBannerContainer {
@@ -124,7 +173,17 @@ body {
     .nhsLogoContainer {
         margin-left: 2.5%;
     }
+    .videoContainer {
+        width: 560px;
+        height: 315px;
+    }
     .nhsLogoContainer h1{
         margin-left: 155px;
+    }
+}
+@media only screen and (max-width: 525px) {
+    .videoContainer {
+        width: 512px;
+        height: 288px;
     }
 }
