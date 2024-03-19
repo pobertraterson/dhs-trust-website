@@ -3,6 +3,7 @@
     <head>
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <meta charset="UTF-8">
+        <script src="bookingScript.js"></script>
         <link rel="stylesheet" href="/stylesheet.css">
         <title>Liverpool | NHS England</title>
     </head>
@@ -18,13 +19,40 @@
         </div>
         <div class="textUnderImage fitWithPage">
             <form>
+                <h2>Title</h2>
+                <select class="inputTextBox" name="title" type="text">
+                    <option value="Mr.">Mr.</option>
+                    <option value="Mrs.">Mrs.</option>
+                    <option value="Ms.">Ms.</option>
+                    <option value="Dr.">Dr.</option>
+                    <option value="Prof.">Prof.</option>
+                </select>
                 <h2>First Name</h2>
-                <input class="inputTextBox" type="text">
+                <input class="inputTextBox" name="forename" type="text">
                 <h2>Surname</h2>
-                <input type="text">
+                <input class="inputTextBox" name="surname" type="text">
+                <h2>Booking reference code</h2>
+                <p>You should've received an email containing your 12-digit code, check your inbox.</p>
+                <p style="color: red;" id="refernceFail">Sorry, that hasn't worked. Please only enter numbers in this box.</p>
+                <input class="inputTextBox" name="reference" id="reference" maxlength="12" type="text">
+                <h2>NHS Number</h2>
+                <p style="color: red;" id="nhsFail">Sorry, that hasn't worked. Please only enter numbers in this box.</p>
+                <input class="inputTextBox" name="nhsNumber" id="nhsNumber" maxlength="10" type="text">
+                <h2>Address Line 1</h2>
+                <input class="inputTextBox" name="addressLine1" type="text">
+                <h2>Address Line 2</h2>
+                <input class="inputTextBox" name="addressLine2" type="text">
+                <h2>Town/City</h2>
+                <input class="inputTextBox" name="townCity" type="text">
+                <h2>County</h2>
+                <input class="inputTextBox" name="county" type="text">
+                <h2>Postcode</h2>
+                <input class="inputTextBox" name="postcode" type="text">
                 <br>
                 <br>
-                <button class="submitButton">Submit</button>
+                <button class="submitButton" onclick="formatChecking()">Submit</button>
+                <br>
+                <br>
             </form>
         </div>
         <br>

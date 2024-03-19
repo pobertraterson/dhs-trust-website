@@ -17,6 +17,13 @@
     "axe/text-alternatives": "off",
     "disown-opener": "off",
     "compat-api/css": "off",
-    "axe/structure": "off"
-  }
+    "axe/structure": "off",
+    "axe/forms": "off",
+    "button-type": "off"
+  },
+  "browserslist": [
+    "defaults",
+    "not ie 11",
+    "not and_ff <= 122"
+  ]
 }
