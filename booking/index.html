@@ -7,7 +7,7 @@
         <link rel="stylesheet" href="/stylesheet.css">
         <title>Liverpool | NHS England</title>
     </head>
-    <body>
+    <body onload="onloading()">
         <div class="banner">
             <div style="position:absolute;" class="nhsLogoContainer">
                 <a href="/"><img alt="NHS Logo" height="100%" width="100%" style="float: left;" src="/resources/nhsengland.png"></a>
@@ -33,10 +33,10 @@
                 <input class="inputTextBox" name="surname" type="text">
                 <h2>Booking reference code</h2>
                 <p>You should've received an email containing your 12-digit code, check your inbox.</p>
-                <p style="color: red;" id="refernceFail">Sorry, that hasn't worked. Please only enter numbers in this box.</p>
+                <p class="errorSpan" id="referenceFail">Sorry, that hasn't worked. Please only enter numbers in this box.</p>
                 <input class="inputTextBox" name="reference" id="reference" maxlength="12" type="text">
                 <h2>NHS Number</h2>
-                <p style="color: red;" id="nhsFail">Sorry, that hasn't worked. Please only enter numbers in this box.</p>
+                <p class="errorSpan" id="nhsFail">Sorry, that hasn't worked. Please only enter numbers in this box.</p>
                 <input class="inputTextBox" name="nhsNumber" id="nhsNumber" maxlength="10" type="text">
                 <h2>Address Line 1</h2>
                 <input class="inputTextBox" name="addressLine1" type="text">

@@ -1,28 +1,27 @@
-document.getElementById("referenceFail").style.display = "none";
-document.getElementById("nhsFail").style.display = "none";
-function formatChecking() {
-    var referenceNumber = document.getElementById("reference"); 
-    var referenceValue = referenceNumber.value;
-    console.log('Reference number is', referenceValue);
-    var nhsNumber = document.getElementById("nhsNumber"); 
-    var nhsValue = nhsNumber.value;
-    console.log('NHS Number is', nhsValue);
-    console.log(isInteger(referenceValue));
-    console.log(isInteger(nhsValue));
-    incorrectFormat(referenceValue, nhsValue);
-}
+var referenceNumber = document.getElementById("reference"); 
+var referenceValue = referenceNumber.value;
+var nhsNumber = document.getElementById("nhsNumber"); 
+var nhsValue = nhsNumber.value;
+var referenceFailing = Boolean(isInteger(referenceValue));
+var nhsFailing = Boolean(isInteger(nhsValue));
+
 function isInteger(value) {
     return /^\d+$/.test(value);
 }
-function incorrectFormat(refValue, nhsnValue) {
-    console.log(isInteger(refValue));
-    console.log(isInteger(nhsnValue));
-    if (Boolean(isInteger(refValue)) == false) {
-        document.getElementById("reference").style.borderColor = "red";
+
+function formatChecking() {
+    onloading();
+}
+
+function onloading() {
+    if (referenceFailing === false) {
         document.getElementById("referenceFail").style.display = "block";
+    } else {
+        document.getElementById("referenceFail").style.display = "none";
     }
-    if (Boolean(isInteger(nhsnValue)) == false) {
-        document.getElementById("nhsNumber").style.borderColor = "red";
+    if (nhsFailing === false) {
         document.getElementById("nhsFail").style.display = "block";
+    } else {
+        document.getElementById("nhsFail").style.display = "none";
     }
 }
