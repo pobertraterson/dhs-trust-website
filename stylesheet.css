@@ -14,6 +14,49 @@
     font-family: Frutiger;
     z-index: 1;
 }
+.linkBanner {
+    position: fixed;
+    background-color: #0354a5;
+    color: white;
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    height: 45px;
+    border: 0;
+    z-index: 1;
+    margin-top: 90px;
+}
+.hideOnMobile {
+    display: block;
+}
+.pageLinks {
+    font-size: 25px;
+    width: calc(100%/6);
+    text-align: center;
+    top: 50%;
+    float: left;
+    -ms-transform: translateY(-25%);
+    transform: translateY(25%);
+    background-color: #0354a5;
+    color: white;
+    text-decoration:none;
+}
+.linkBanner :hover {
+    background-color: #003f7f;
+    border-style: 3px solid;
+    height: 45px;
+    top: 25%;
+    -ms-transform: translateY(25%);
+    transform: translateY(0%);
+}
+.linkBanner a{
+    font-size: 25px;
+    color: white;
+    text-decoration: none;
+}
+.linkBanner a:hover {
+    padding: 0;
+}
 .errorSpan {
     color: red; 
     font-size: 20px;
@@ -149,13 +192,44 @@ td {
 .colour3 {
     background-color: #e1e1e1;
 }
+.showOnMobile {
+    display: none;
+}
 .videoContainer {
     width: 560px;
     height: 315px;
     position:relative;
     transition: 0.2s;
 }
-
+.moreFac {
+    width: 200%;
+}
+.menuIcon {
+    top: 50%;
+    color: white;
+    margin-right: 10%;
+    float:right;
+    -ms-transform: translateY(50%);
+    transform: translateY(50%);
+    transition: 0.5s;
+    
+}
+.menuIcon :hover {
+    filter: invert(0.25);
+}
+.slideOutMenu {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    font-family: Frutiger;
+    z-index: 69;
+    top: 0;
+    right: 0;
+    color: #ffffff;
+    background-color: #29214c;
+    overflow-x: hidden;
+    transition: 0.5s; 
+}
 @media only screen and (max-width: 1450px) {
     .hospitalImageBannerContainer {
         height: 450px;
@@ -189,6 +263,12 @@ td {
         width: 256px;
         height: 144px;
     }
+    .showOnMobile {
+        display: block;
+    }
+    .hideOnMobile {
+        display: none;
+    }
 }
 @media only screen and (max-width: 635px) {
     .hospitalImageBannerContainer {
@@ -209,16 +289,19 @@ td {
         margin-left: 2.5%;
     }
     .videoContainer {
-        width: 560px;
-        height: 315px;
+        width: 384px;
+        height: 216px;
     }
     .nhsLogoContainer h1{
         margin-left: 155px;
     }
+    .moreFac {
+        width: 100%;
+    }
 }
 @media only screen and (max-width: 525px) {
     .videoContainer {
-        width: 512px;
-        height: 288px;
+        width: 256px;
+        height: 144px;
     }
 }
