@@ -25,6 +25,7 @@
     border: 0;
     z-index: 1;
     margin-top: 90px;
+    transition: 0.3s;
 }
 .hideOnMobile {
     display: block;
@@ -49,13 +50,15 @@
     -ms-transform: translateY(25%);
     transform: translateY(0%);
 }
-.linkBanner a{
+.pageLinks a{
     font-size: 25px;
     color: white;
     text-decoration: none;
 }
-.linkBanner a:hover {
-    padding: 0;
+.pageLinks a:hover {
+    top: 25%;
+    -ms-transform: translateY(-25%);
+    transform: translateY(-25%);
 }
 .errorSpan {
     color: red; 
@@ -226,9 +229,20 @@ td {
     top: 0;
     right: 0;
     color: #ffffff;
-    background-color: #29214c;
+    background-color: #0a2d77;
     overflow-x: hidden;
     transition: 0.5s; 
+}
+.slideOutMenu a {
+    color: #ffffff;
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    display: block;
+    transition: 0.3s;
+}
+.slideOutMenu a:hover {
+    filter: invert(0.25);
 }
 @media only screen and (max-width: 1450px) {
     .hospitalImageBannerContainer {
@@ -246,6 +260,14 @@ td {
         margin-top: -365px
     }   
 }
+@media only screen and (max-width: 996px) {
+    .showOnMobile {
+        display: block;
+    }
+    .hideOnMobile {
+        display: none;
+    }
+}
 @media only screen and (max-width: 982px) {
     .videoContainer {
         width: 384px;
@@ -262,12 +284,6 @@ td {
     .videoContainer {
         width: 256px;
         height: 144px;
-    }
-    .showOnMobile {
-        display: block;
-    }
-    .hideOnMobile {
-        display: none;
     }
 }
 @media only screen and (max-width: 635px) {
