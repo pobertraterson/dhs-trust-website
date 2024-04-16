@@ -1,6 +1,6 @@
 @font-face{
     font-family: Frutiger;
-    src: local("/resources/Frutiger.ttf"), url("https://filestore.pobertmc.xyz/Frutiger.ttf");
+    src: url("/resources/Frutiger.ttf")
 }
 
 .banner {
@@ -41,14 +41,11 @@
     background-color: #0354a5;
     color: white;
     text-decoration:none;
+    transition: 0.15s;
 }
 .linkBanner :hover {
     background-color: #003f7f;
-    border-style: 3px solid;
-    height: 45px;
-    top: 25%;
-    -ms-transform: translateY(25%);
-    transform: translateY(0%);
+    height: 75%;
 }
 .pageLinks a{
     font-size: 25px;
